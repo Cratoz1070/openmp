@@ -72,6 +72,8 @@
             "cwd": "${workspaceFolder}\\task4",
             "preLaunchTask": "Build Task4 experiment",
             "internalConsoleOptions": "neverOpen"
-        }
+        },
+        {"name":"Запустить задание 5 во встроенном терминале","type":"node-terminal","request":"launch","command":"${workspaceFolder}\\task5\\task5.exe","cwd":"${workspaceFolder}\\task5","preLaunchTask":"Build all Task5 programs","internalConsoleOptions":"neverOpen"},
+        {"name":"Запустить эксперименты задания 5","type":"node-terminal","request":"launch","command":"${workspaceFolder}\\task5\\exp.exe","cwd":"${workspaceFolder}\\task5","preLaunchTask":"Build Task5 experiment","internalConsoleOptions":"neverOpen"}
     ]
 }

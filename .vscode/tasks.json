@@ -391,6 +391,14 @@
             "dependsOrder": "parallel",
             "problemMatcher": []
         },
+        {"label":"Build Task5 launcher","type":"process","command":"C:\\msys64\\mingw64\\bin\\g++.exe","args":["-std=c++17","-O2","-g","-Wall","-Wextra","task5.cpp","-o","task5.exe"],"options":{"cwd":"${workspaceFolder}\\task5"},"problemMatcher":["$gcc"]},
+        {"label":"Build Task5 seq","type":"process","command":"C:\\msys64\\mingw64\\bin\\g++.exe","args":["-std=c++17","-O2","-g","-Wall","-Wextra","-fopenmp","seq.cpp","-o","seq.exe"],"options":{"cwd":"${workspaceFolder}\\task5"},"problemMatcher":["$gcc"]},
+        {"label":"Build Task5 static","type":"process","command":"C:\\msys64\\mingw64\\bin\\g++.exe","args":["-std=c++17","-O2","-g","-Wall","-Wextra","-fopenmp","static.cpp","-o","static.exe"],"options":{"cwd":"${workspaceFolder}\\task5"},"problemMatcher":["$gcc"]},
+        {"label":"Build Task5 dynamic","type":"process","command":"C:\\msys64\\mingw64\\bin\\g++.exe","args":["-std=c++17","-O2","-g","-Wall","-Wextra","-fopenmp","dynamic.cpp","-o","dynamic.exe"],"options":{"cwd":"${workspaceFolder}\\task5"},"problemMatcher":["$gcc"]},
+        {"label":"Build Task5 guided","type":"process","command":"C:\\msys64\\mingw64\\bin\\g++.exe","args":["-std=c++17","-O2","-g","-Wall","-Wextra","-fopenmp","guided.cpp","-o","guided.exe"],"options":{"cwd":"${workspaceFolder}\\task5"},"problemMatcher":["$gcc"]},
+        {"label":"Build Task5 exp","type":"process","command":"C:\\msys64\\mingw64\\bin\\g++.exe","args":["-std=c++17","-O2","-g","-Wall","-Wextra","exp.cpp","-o","exp.exe"],"options":{"cwd":"${workspaceFolder}\\task5"},"problemMatcher":["$gcc"]},
+        {"label":"Build all Task5 programs","dependsOn":["Build Task5 launcher","Build Task5 seq","Build Task5 static","Build Task5 dynamic","Build Task5 guided"],"dependsOrder":"parallel","problemMatcher":[]},
+        {"label":"Build Task5 experiment","dependsOn":["Build Task5 seq","Build Task5 static","Build Task5 dynamic","Build Task5 guided","Build Task5 exp"],"dependsOrder":"parallel","problemMatcher":[]},
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
