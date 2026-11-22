@@ -1,0 +1,419 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build current C++ file with OpenMP",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Build Task1 launcher",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "task1.cpp",
+                "-o",
+                "task1.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task1"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build seq",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "seq.cpp",
+                "-o",
+                "seq.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task1"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build red",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "red.cpp",
+                "-o",
+                "red.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task1"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build nored",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "nored.cpp",
+                "-o",
+                "nored.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task1"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build exp",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "exp.cpp",
+                "-o",
+                "exp.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task1"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build all Task1 programs",
+            "dependsOn": [
+                "Build Task1 launcher",
+                "Build seq",
+                "Build red",
+                "Build nored"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task1 experiment",
+            "dependsOn": [
+                "Build seq",
+                "Build red",
+                "Build nored",
+                "Build exp"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task2 launcher",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "task2.cpp",
+                "-o",
+                "task2.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task2"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build Task2 seq",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "seq.cpp",
+                "-o",
+                "seq.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task2"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build Task2 red",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "red.cpp",
+                "-o",
+                "red.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task2"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build Task2 nored",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-fopenmp",
+                "nored.cpp",
+                "-o",
+                "nored.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task2"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build Task2 exp",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "exp.cpp",
+                "-o",
+                "exp.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\task2"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build all Task2 programs",
+            "dependsOn": [
+                "Build Task2 launcher",
+                "Build Task2 seq",
+                "Build Task2 red",
+                "Build Task2 nored"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task2 experiment",
+            "dependsOn": [
+                "Build Task2 seq",
+                "Build Task2 red",
+                "Build Task2 nored",
+                "Build Task2 exp"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task3 launcher",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "task3.cpp", "-o", "task3.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task3"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task3 seq",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "-fopenmp", "seq.cpp", "-o", "seq.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task3"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task3 red",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "-fopenmp", "red.cpp", "-o", "red.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task3"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task3 nored",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "-fopenmp", "nored.cpp", "-o", "nored.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task3"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task3 exp",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "exp.cpp", "-o", "exp.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task3"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build all Task3 programs",
+            "dependsOn": ["Build Task3 launcher", "Build Task3 seq", "Build Task3 red", "Build Task3 nored"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task3 experiment",
+            "dependsOn": ["Build Task3 seq", "Build Task3 red", "Build Task3 nored", "Build Task3 exp"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task4 launcher",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "task4.cpp", "-o", "task4.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task4"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task4 seq",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "-fopenmp", "seq.cpp", "-o", "seq.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task4"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task4 red",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "-fopenmp", "red.cpp", "-o", "red.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task4"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task4 nored",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "-fopenmp", "nored.cpp", "-o", "nored.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task4"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Task4 exp",
+            "type": "process",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": ["-std=c++17", "-O2", "-g", "-Wall", "-Wextra", "exp.cpp", "-o", "exp.exe"],
+            "options": {"cwd": "${workspaceFolder}\\task4"},
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build all Task4 programs",
+            "dependsOn": ["Build Task4 launcher", "Build Task4 seq", "Build Task4 red", "Build Task4 nored"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build Task4 experiment",
+            "dependsOn": ["Build Task4 seq", "Build Task4 red", "Build Task4 nored", "Build Task4 exp"],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-fopenmp"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Task generated by Debugger."
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Запустить задание 1 во встроенном терминале",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task1\\task1.exe",
+            "cwd": "${workspaceFolder}\\task1",
+            "preLaunchTask": "Build all Task1 programs",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить эксперименты задания 1",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task1\\exp.exe",
+            "cwd": "${workspaceFolder}\\task1",
+            "preLaunchTask": "Build Task1 experiment",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить задание 2 во встроенном терминале",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task2\\task2.exe",
+            "cwd": "${workspaceFolder}\\task2",
+            "preLaunchTask": "Build all Task2 programs",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить эксперименты задания 2",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task2\\exp.exe",
+            "cwd": "${workspaceFolder}\\task2",
+            "preLaunchTask": "Build Task2 experiment",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить задание 3 во встроенном терминале",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task3\\task3.exe",
+            "cwd": "${workspaceFolder}\\task3",
+            "preLaunchTask": "Build all Task3 programs",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить эксперименты задания 3",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task3\\exp.exe",
+            "cwd": "${workspaceFolder}\\task3",
+            "preLaunchTask": "Build Task3 experiment",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить задание 4 во встроенном терминале",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task4\\task4.exe",
+            "cwd": "${workspaceFolder}\\task4",
+            "preLaunchTask": "Build all Task4 programs",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Запустить эксперименты задания 4",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "${workspaceFolder}\\task4\\exp.exe",
+            "cwd": "${workspaceFolder}\\task4",
+            "preLaunchTask": "Build Task4 experiment",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
